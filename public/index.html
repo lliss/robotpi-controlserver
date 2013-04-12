@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Robot Contols</title>
+<script type="text/javascript" src="socket.io/socket.io.js"></script>
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="controls.js"></script>
+<style>
+  html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, em, img, strong, dl, dt, dd, ol, ul, li, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, html, table {
+  height:100%;
+  width:100%;
+  font-family:sans-serif;
+}
+
+a, a:link, a:visited {
+  color:white;
+  background-color:navy;
+  display:block;
+  width:50%;
+  margin-right:auto;
+  margin-left:auto;
+  border-radius:10px;
+  font-weight:bold;
+  text-decoration:none;
+  padding-top:30px;
+  padding-bottom:30px;
+}
+
+a.red, td.red a {
+  background-color:maroon;
+}
+
+a.s {
+  width:30%;
+  padding-top:20px;
+  padding-bottom:20px;
+  font-size:80%;
+}
+</style>
+</head>
+
+<body>
+<table border="0">
+  <tr>
+    <td width="20%" align="center" valign="middle"><div id="content"></div></td>
+    <td width="20%" align="center" valign="middle">&nbsp;</td>
+    <td width="20%" align="center" valign="middle">&nbsp;</td>
+    <td width="20%" align="center" valign="middle">&nbsp;</td>
+    <td width="20%" align="center" valign="middle">
+      <br /><a class="s" style="background-color:red;" href="#">STOP</a><br />or reset
+    </td>
+  </tr>
+  <tr>
+    <td width="20%" height="20%" align="center" valign="middle">&nbsp;</td>
+    <td width="20%" height="20%" align="center" valign="middle">
+      <br /><br /><br /><br /><br />
+      <a class="s control" data-action="pulsel" href="#">PULSE</a>
+    </td>
+    <td width="20%" height="20%" align="center" valign="middle">
+      <a class="s control" data-action="pulsef" href="#">PULSE</a>
+      <br />
+      <a class="control" data-action="forward" href="#">FORWARD</a>
+    </td>
+    <td width="20%" height="20%" align="center" valign="middle">
+      <br /><br /><br /><br /><br />
+      <a class="s control" data-action="pulser" href="#">PULSE</a>
+    </td>
+    <td width="20%" height="20%" align="center" valign="middle">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="20%" height="20%" align="center" valign="middle">&nbsp;</td>
+    <td width="20%" height="20%" align="center" valign="middle">
+      <a class="control" data-action="turnl" href="#">LEFT</a>
+    </td>
+    <td class="red" width="20%" height="20%" align="center" valign="middle">
+      <a class="red control" data-action="stop" href="#">BREAK</a>
+    </td>
+    <td width="20%" height="20%" align="center" valign="middle">
+      <a class="control" data-action="turnr" href="#">RIGHT</a>
+    </td>
+    <td width="20%" height="20%" align="center" valign="middle">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="20%" height="20%" align="center" valign="middle">&nbsp;</td>
+    <td width="20%" height="20%" align="center" valign="middle">&nbsp;</td>
+    <td width="20%" height="20%" align="center" valign="middle">
+      <a class="control" data-action="backward" href="#">REVERSE</a>
+      <br />
+      <a class="s control" data-action="pulseb" href="#">PULSE</a>
+    </td>
+    <td width="20%" height="20%" align="center" valign="middle">&nbsp;</td>
+    <td width="20%" height="20%" align="center" valign="middle">
+      <a class="s control" data-action="lights" href="#">LIGHTS</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="20%" height="20%" align="center" valign="middle">&nbsp;</td>
+    <td width="20%" height="20%" align="center" valign="middle">&nbsp;</td>
+    <td width="20%" height="20%" align="center" valign="middle">&nbsp;</td>
+    <td width="20%" height="20%" align="center" valign="middle">&nbsp;</td>
+    <td width="20%" height="20%" align="center" valign="middle">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>
