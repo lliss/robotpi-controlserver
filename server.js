@@ -18,18 +18,16 @@ responder.sockets.on('connection', function (socket) {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
+        'Connection' : 'close'
       }
     }
-    var apirequest = http.request(options, function(res) {
+    var apiRequest = http.request(options, function(res) {
       console.log('STAT: ' + res.statusCode);
     });
-    apirequest.write('{"test" : "TRUE"}');
-    apirequest.end();
-    apirequest.on('error', function(e) {
+    apiRequest.write('{"test" : "TRUE"}');
+    apiRequest.end();
+    apiRequest.on('error', function(e) {
       console.log('hit an error');
-    });
-    apirequest.on('end', function() {
-      console.log('END REQUEST');
     });
   });
 });
