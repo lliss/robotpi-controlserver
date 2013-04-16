@@ -24,7 +24,7 @@ responder.sockets.on('connection', function (socket) {
     var apiRequest = http.request(options, function(res) {
       console.log('STAT: ' + res.statusCode);
     });
-    apiRequest.write('{"test" : "TRUE"}');
+    apiRequest.write(JSON.stringify({fire : requestAction}));
     apiRequest.end();
     apiRequest.on('error', function(e) {
       console.log('hit an error');
