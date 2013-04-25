@@ -5,11 +5,11 @@ socket.on('entrance', function  (data) {
 });
 
 $(document).ready(function () {
-  $('a.control').mousedown(function() {
+  $('a.control').on('mousedown touchstart', function() {
     socket.emit('action', JSON.stringify({"value" : $(this).data('action')}));
     return false;
   });
-  $('a.control').mouseup(function() {
+  $('a.control').on('mouseup touchend', function() {
     socket.emit('action', JSON.stringify({"value" : "stop"}));
     return false;
   });
