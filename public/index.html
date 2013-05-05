@@ -65,29 +65,19 @@ a.s {
 <body>
 <table border="0">
   <tr>
-    <td width="20%" align="center" valign="middle"><div id="content"></div></td>
+    <td width="20%" align="center" valign="middle"><img id="vision" src=":8881/image.jpg" /></td>
     <td width="20%" align="center" valign="middle">&nbsp;</td>
     <td width="20%" align="center" valign="middle">&nbsp;</td>
     <td width="20%" align="center" valign="middle">&nbsp;</td>
-    <td width="20%" align="center" valign="middle">
-      <br /><a class="s" style="background-color:red;" href="#">STOP</a><br />or reset
-    </td>
+    <td width="20%" align="center" valign="middle">&nbsp;</td>
   </tr>
   <tr>
     <td width="20%" height="20%" align="center" valign="middle">&nbsp;</td>
+    <td width="20%" height="20%" align="center" valign="middle">&nbsp;</td>
     <td width="20%" height="20%" align="center" valign="middle">
-      <br /><br /><br /><br /><br />
-      <a class="s control" data-action="pulsel" href="#">PULSE</a>
-    </td>
-    <td width="20%" height="20%" align="center" valign="middle">
-      <a class="s control" data-action="pulsef" href="#">PULSE</a>
-      <br />
       <a class="control" data-action="forward" href="#">FORWARD</a>
     </td>
-    <td width="20%" height="20%" align="center" valign="middle">
-      <br /><br /><br /><br /><br />
-      <a class="s control" data-action="pulser" href="#">PULSE</a>
-    </td>
+    <td width="20%" height="20%" align="center" valign="middle">&nbsp;</td>
     <td width="20%" height="20%" align="center" valign="middle">&nbsp;</td>
   </tr>
   <tr>
@@ -108,13 +98,9 @@ a.s {
     <td width="20%" height="20%" align="center" valign="middle">&nbsp;</td>
     <td width="20%" height="20%" align="center" valign="middle">
       <a class="control" data-action="reverse" href="#">REVERSE</a>
-      <br />
-      <a class="s control" data-action="pulseb" href="#">PULSE</a>
     </td>
     <td width="20%" height="20%" align="center" valign="middle">&nbsp;</td>
-    <td width="20%" height="20%" align="center" valign="middle">
-      <a class="s control" data-action="lights" href="#">LIGHTS</a>
-    </td>
+    <td width="20%" height="20%" align="center" valign="middle">&nbsp;</td>
   </tr>
   <tr>
     <td width="20%" height="20%" align="center" valign="middle">&nbsp;</td>
@@ -124,5 +110,18 @@ a.s {
     <td width="20%" height="20%" align="center" valign="middle">&nbsp;</td>
   </tr>
 </table>
+  <script type="text/javascript">
+    <!--
+      var newPic = self.setInterval(function() {reloadPic()}, 5000);
+
+      function reloadPic() {
+        var pic = document.getElementById('vision');
+        var time = new Date();
+        pic.src = ':8881/image.jpg' + '?' + time.getTime();
+        console.log(pic.src);
+      }
+      //reloadPic();
+    -->
+  </script>
 </body>
 </html>
