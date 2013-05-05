@@ -65,7 +65,7 @@ a.s {
 <body>
 <table border="0">
   <tr>
-    <td width="20%" align="center" valign="middle"><img id="vision" src=":8881/image.jpg" /></td>
+    <td width="20%" align="center" valign="middle"><img id="vision" src="" /></td>
     <td width="20%" align="center" valign="middle">&nbsp;</td>
     <td width="20%" align="center" valign="middle">&nbsp;</td>
     <td width="20%" align="center" valign="middle">&nbsp;</td>
@@ -113,14 +113,16 @@ a.s {
   <script type="text/javascript">
     <!--
       var newPic = self.setInterval(function() {reloadPic()}, 5000);
+      var ip = location.host;
+      // Find our current hostname minus the 4 digit port number
+      ip = ip.substr(0, ip.length - 5);
 
       function reloadPic() {
         var pic = document.getElementById('vision');
         var time = new Date();
-        pic.src = ':8881/image.jpg' + '?' + time.getTime();
+        pic.src = 'http://' + ip + ':8881/image.jpg' + '?' + time.getTime();
         console.log(pic.src);
       }
-      //reloadPic();
     -->
   </script>
 </body>
