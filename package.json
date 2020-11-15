@@ -7,8 +7,8 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "socket.io" : "0.9.13",
-    "connect" : "2.7.2"
+    "socket.io": "0.9.13",
+    "connect": "2.7.2"
   },
   "author": "LL",
   "license": "GNU"
